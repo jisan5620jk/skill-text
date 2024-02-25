@@ -1,0 +1,105 @@
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .header-logo img {
+    width: 100%;
+  }
+
+  .header-right-icon-action button {
+    padding: 0;
+  }
+
+  .headers-button small {
+    top: -12px;
+    right: -5px;
+  }
+
+  .offer-box-title a {
+    font-size: 1.1em;
+  }
+
+  .menu-btn {
+    margin-left: 0px;
+  }
+
+  .menu-btn.cloudflow-btn a {
+    padding: 15px 40px 14px 18px;
+  }
+
+  .menu-btn.cloudflow-btn i {
+    right: 19px;
+  }
+
+  /* About section */
+  .about-thumb img {
+    width: 100%;
+  }
+
+  .about-thumb-counter-icon img {
+    width: auto;
+  }
+
+  .about-thumb-counter {
+    bottom: -3.3rem;
+    right: 0rem;
+  }
+
+  .testimonial-desc p {
+    font-size: 23px;
+  }
+
+  .testimonial-thumb img {
+    width: 100%;
+  }
+
+  .about2-item {
+    gap: 4px;
+  }
+
+.blog-title a {
+    font-size: 24px;
+}
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1199px) {
+  nav.main-menu-content > ul > li > a > i {
+    display: none;
+  }
+
+  nav.main-menu-content ul li a {
+    padding: 8px 0;
+  }
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  nav.main-menu-content > ul > li > a > i {
+    display: none;
+  }
+
+  nav.main-menu-content ul li a {
+    padding: 8px 0;
+  }
+}
+
+/* Large Mobile :600px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  nav.main-menu-content > ul > li > a > i {
+    display: none;
+  }
+
+  nav.main-menu-content ul li a {
+    padding: 8px 0;
+  }
+}
+
+/* small mobile :320px. */
+@media only screen and (max-width: 575px) {
+  nav.main-menu-content > ul > li > a > i {
+    display: none;
+  }
+
+  nav.main-menu-content ul li a {
+    padding: 8px 0;
+  }
+}
