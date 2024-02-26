@@ -118,12 +118,13 @@
   transform: rotate(-180deg);
   position: relative;
   top: 5px;
+  margin-left: 30px;
 }
 
 .menu-bar span {
   display: block;
   height: 2px;
-  background: var(--common-white);
+  background: var(--theme-2);
   margin: 5px;
   transition: all 0.5s ease;
   border-radius: 30px;
@@ -839,7 +840,9 @@ section.banner-section {
   position: relative;
   overflow: hidden;
   height: 890px;
-  background: #f5f5f7;
+  background: url(../images/main-thumb/banner/banner-bg.jpg) no-repeat center/cover;
+  display: flex;
+  align-items: center;
 }
 
 .banner-title h1 {
@@ -895,29 +898,74 @@ section.banner-section {
   position: relative;
 }
 
-.banner-thumb img:first-child {
-  position: relative;
-  top: 19rem;
-  left: 0;
-  z-index: 2;
-}
-
-.banner-thumb img:last-child {
-  position: relative;
-  top: -19rem;
-  right: -14rem;
-  z-index: 1;
-}
-
-.banner-thumb::before img:last-child {
+.banner-shape {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  content: "";
-  width: 300px;
-  height: 384px;
-  border-radius: 150px, 150px, 0px, 0px;
-  background: #95d5ee;
+  bottom: -3rem;
+  left: -12.5rem;
+  animation: updown 2s alternate infinite;
+  -webkit-animation: updown 2s alternate infinite;
+}
+
+.banner-shape2 {
+  position: absolute;
+  bottom: 5.5rem;
+  right: -7rem;
+  animation: swing 1.8s alternate infinite;
+  -webkit-animation: swing 1.8s alternate infinite;
+}
+
+.banner-shape3 {
+  position: absolute;
+  top: 9.5rem;
+  right: -4rem;
+  animation: scale-up-one 3s alternate infinite;
+  -webkit-animation: scale-up-one 3s alternate infinite;
+}
+
+.banner-shape4 {
+  position: absolute;
+  top: 4rem;
+  left: 7rem;
+  animation: updown 1.8s alternate infinite;
+  -webkit-animation: updown 1.8s alternate infinite;
+}
+
+.banner-thumb-client {
+  padding: 24px;
+  background: var(--common-white);
+  border-radius: 10px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  width: 304px;
+  position: absolute;
+  bottom: 14.8rem;
+  right: -4.8rem;
+}
+
+.banner-thumb-client-counter {
+  display: flex;
+  align-items: center;
+}
+
+.banner-thumb-client-counter h1 {
+  font-family: var(--ff-body);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: -0.7919999957084656px;
+  color: var(--theme-2);
+}
+
+.banner-thumb-client-desc p {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.17599999904632568px;
+  text-align: left;
+  margin: 5px 0 0;
+  color: #1b1d1b;
 }
 
 /*------------------------------------------
@@ -926,6 +974,15 @@ section.banner-section {
 
 section.service-section {
   padding: 108px 0 90px;
+  position: relative;
+}
+
+.service-shape {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    animation: updown 1.8s alternate infinite;
+    -webkit-animation: updown 1.8s alternate infinite;
 }
 
 .service-box {
@@ -989,9 +1046,9 @@ section.service-section {
 -----------------------------------------*/
 
 section.content-slider-section {
-  background: var(--theme-1);
-  padding: 20px 0;
-  --duration: 20s;
+  background: #f5f5f7;
+  padding: 40px 0 14px;
+  --duration: 40s;
   --gap: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1004,6 +1061,10 @@ section.content-slider-section {
   gap: 0px;
 }
 
+section.content-slider-section.style2 {
+  padding: 14px 0 40px;
+}
+
 .content-slider {
   text-align: center;
   -ms-flex-negative: 0;
@@ -1011,8 +1072,8 @@ section.content-slider-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  animation: scroll 20s linear infinite;
-  -webkit-animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear infinite;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1023,8 +1084,12 @@ section.content-slider-section {
 }
 
 .content-slider.style2 {
-  animation: scroll2 20s linear infinite;
-  -webkit-animation: scroll2 20s linear infinite;
+  animation: scroll2 120s linear infinite;
+  -webkit-animation: scroll2 120s linear infinite;
+}
+
+.content-slider.style2 .content-slider-content {
+  --duration: 120s;
 }
 
 .content-slider-content {
@@ -1106,7 +1171,7 @@ section.about-section {
   width: 262px;
   position: absolute;
   bottom: -3rem;
-  right: -4rem;
+  right: -1rem;
 }
 
 .about-thumb-counter-icon {
@@ -1247,8 +1312,10 @@ section.gallery-section {
   margin: -6px 0 -22px -42px;
 }
 
+
+
 .gallery-single-box:nth-child(5) .gallary-box-thumb img {
-  margin: 30px 0 15px -42px;
+    margin: 30px 0 45px -42px;
 }
 
 .gallery-single-box:nth-child(3) .gallery-box-content {
@@ -1315,7 +1382,7 @@ section.testimonial-section {
 .testimonial-profile:before {
   position: absolute;
   content: "";
-  top: 19px;
+  top: 17px;
   left: 0;
   width: 55px;
   height: 1px;
@@ -1345,10 +1412,14 @@ section.testimonial-section {
  <-- CloudFlow Counter CSS  Start -->
 -----------------------------------------*/
 
+.counter-bg {
+background: linear-gradient(to bottom, #faf7f0 50%, transparent 50%);
+}
+
 section.counter-section {
   background: #95d5ee;
   border-radius: 20px;
-  padding: 80px;
+  padding: 80px 80px  50px;
   position: relative;
   z-index: 1;
 }
@@ -1361,7 +1432,7 @@ section.counter-section::before {
   width: 100%;
   height: 100%;
   background: url(../images/main-thumb/counter/counter-bg.png) no-repeat
-    center/cover;
+    bottom/cover;
   z-index: -1;
 }
 
@@ -1369,6 +1440,7 @@ section.counter-section::before {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-bottom: 30px;
 }
 
 .counter-box-icon {
@@ -1547,12 +1619,12 @@ section.contact-section .contact-desc p {
  <-- CloudFlow Blog CSS  Start -->
 -----------------------------------------*/
 
-section.blog-section{
+section.blog-section {
   padding: 120px 0 160px;
 }
 
 section.blog-section .cloudflow-section-title {
-    margin-bottom: -60px;
+  margin-bottom: -60px;
 }
 
 .blog-single-box {
@@ -1563,6 +1635,7 @@ section.blog-section .cloudflow-section-title {
   transition: 0.5s;
 }
 
+.blog-single-box.active,
 .blog-single-box:hover {
   border-color: #95d5ee;
 }
@@ -1668,4 +1741,306 @@ section.blog-section .cloudflow-section-title {
 .blog-arrow-box button.active {
   background: var(--theme-1);
   color: var(--common-white);
+}
+
+/*------------------------------------------
+ <-- CloudFlow Newsletter CSS  Start -->
+-----------------------------------------*/
+
+section.newsletter-section {
+  padding: 82px 0;
+  background: #f5f5f7;
+}
+
+.newsletter-thumb img {
+    margin-top: -12rem;
+}
+
+.newsletter-content {
+  position: relative;
+}
+
+.newsletter-form form {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 56px;
+}
+
+.newsletter-form input {
+  border: 1px solid #d1d1d1;
+  height: 60px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.17599999904632568px;
+}
+
+.newsletter-form input::placeholder {
+  font-family: var(--ff-body);
+  color: #514a74;
+}
+
+.newsletter-form button {
+  font-family: var(--ff-heading);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: -0.17599999904632568px;
+  text-align: left;
+  padding: 19px 32px;
+  background: var(--theme-1);
+  color: var(--common-white);
+  border-radius: 30px;
+}
+
+.newsletter-shape h1 {
+  font-family: DM Sans;
+  font-size: 92px;
+  font-weight: 700;
+  line-height: 110px;
+  letter-spacing: -0.17599999904632568px;
+  color: transparent;
+  -webkit-text-stroke: 0.8px var(--theme-2);
+  -webkit-text-stroke-width: 2px;
+  opacity: 6%;
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  transform: translateY(-50%);
+}
+
+/*------------------------------------------
+ <-- CloudFlow Newsletter CSS  Start -->
+-----------------------------------------*/
+
+footer.footer-section {
+  padding: 80px 0 0;
+}
+
+.footer-logo {
+  z-index: 1;
+  text-align: center;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.footer-logo:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: "";
+  transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+  background: #d1d1d1;
+  z-index: -1;
+}
+
+.footer-logo a {
+  background: var(--common-white);
+  padding: 0 24px;
+}
+
+.footer-content-title h5,
+.footer-service h5,
+.footer-about h5,
+.footer-contact h5 {
+  font-family: var(--ff-heading);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 39px;
+  letter-spacing: -0.30000001192092896px;
+  color: var(--theme-2);
+}
+
+.footer-desc p {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.17599999904632568px;
+  color: #514a74;
+  margin: 10px 0 15px;
+}
+
+.footer-link ul {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-link ul li a {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  color: var(--theme-2);
+}
+
+.footer-service ul,
+.footer-about ul {
+  margin-top: 20px;
+}
+
+.footer-service ul li a,
+.footer-about ul li a {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.17599999904632568px;
+  color: #514a74;
+  margin: 5px 0;
+}
+
+.footer-service ul li a i,
+.footer-about ul li a i {
+  padding-right: 8px;
+  color: var(--theme-1);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.footer-contact-item.style1 {
+  margin: 24px 0 18px;
+}
+
+.footer-item-icon i {
+  background: #f5f5f7;
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--theme-1);
+}
+
+.footer-item-content p,
+.footer-item-content a {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.17599999904632568px;
+  text-align: left;
+  color: #514a74;
+  margin: 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid #d1d1d1;
+  margin-top: 74px;
+  padding: 28px 0;
+}
+
+.footer-copyright p {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.17599999904632568px;
+  text-align: left;
+  color: #514a74;
+  margin: 0;
+}
+
+.footer-bottom-link ul {
+  display: flex;
+  justify-content: end;
+  gap: 34px;
+}
+
+.footer-bottom-link ul li a {
+  font-family: var(--ff-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.17599999904632568px;
+  text-align: left;
+  color: #514a74;
+}
+
+/*------------------------------------------
+ <-- CloudFlow Scroll CSS  Start -->
+-----------------------------------------*/
+
+.scroll-to-top {
+  position: fixed;
+  right: -10px;
+  bottom: 100px;
+  transform: rotate(90deg);
+  z-index: 99;
+}
+
+.scroll-to-top .visible {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.scroll-to-top .scroll-top-inner {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-to-top .scroll-top-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  -o-transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+  transition: all cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+}
+
+.scroll-to-top .scroll-bar {
+  width: 70px;
+  height: 2px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.scroll-to-top .scroll-bar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(85, 85, 85);
+  opacity: 0.3;
+}
+
+.scroll-to-top .scroll-bar .bar-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: var(--theme-1);
+}
+
+.scroll-to-top .scroll-bar-text {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--theme-1);
+  transition: all 500ms ease;
+}
+
+.scroll-to-top .scroll-bar-text:hover {
+  transform: scale(1.1);
 }
